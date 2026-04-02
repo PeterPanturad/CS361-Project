@@ -11,8 +11,9 @@ def merge3Way(arr, left, mid1, mid2, right):
     L = [0] * n1   
     M = [0] * n2
     R = [0] * n3
-
-    i = j = k = 0 # Pointers for L, M, R
+    i = 0
+    j = 0
+    k = 0 # Pointers for L, M, R
     l = left
 
     #Compare all three and pick the smallest
@@ -69,10 +70,10 @@ def threewaymerger(arr, left, right):
 
         #used to have two recursive calls
         #orginal merge sort is aarry, most left, and most right
-        #
+        
         threewaymerger(arr, left, mid1)
         threewaymerger(arr, mid1 + 1, mid2)
-        threewaymerger(arr, mid2 + 1, right)
+        threewaymerger(arr, mid2 + 1, right) #addded extra recursoins compared to two way
 
         # A new merge function for 3
         merge3Way(arr, left, mid1, mid2, right)
