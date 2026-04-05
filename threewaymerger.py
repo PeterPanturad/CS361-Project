@@ -5,9 +5,6 @@ import time #to record time
 import matplotlib.pyplot as plt
 #general code taken from https://www.geeksforgeeks.org/dsa/3-way-merge-sort/
 def merge3Way(arr, left, mid1, mid2, right):
-    n1 = mid1 - left + 1
-    n2 = mid2 - mid1
-    n3 = right - mid2
     L = arr[left:mid1+1] #left to middle and +1 to include end
     M = arr[mid1+1:mid2+1]
     R = arr[mid2+1:right+1] #+1 to include end here too
