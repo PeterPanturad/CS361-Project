@@ -1,0 +1,14 @@
+Instructions on how to run code for threewaymerger.py
+
+
+Numpy
+1. Install python libraries: numpy and matplotlib via pip install "pip install matplotlib" and "pip install numpy"
+2. Run in jupyter-notebooks or Colab
+3. View output in console and at the end see graphs once both integer types are done.
+
+
+Output:
+Time for each array to be sorted
+The array that was sorted 
+Graph showing integers and double precision arrays in relation to array size (x) and time (y)
+
