@@ -8,12 +8,12 @@ def merge3Way(arr, left, mid1, mid2, right):
     n1 = mid1 - left + 1
     n2 = mid2 - mid1
     n3 = right - mid2
-    L = [0] * n1   
-    M = [0] * n2
-    R = [0] * n3
+    L = arr[left:mid1+1] #left to middle and +1 to include end
+    M = arr[mid1+1:mid2+1]
+    R = arr[mid2+1:right+1] #+1 to include end here too
     i = 0
     j = 0
-    k = 0 # Pointers for L, M, R
+    k = 0 
     l = left
 
     #Compare all three and pick the smallest
@@ -94,6 +94,7 @@ for i in range(31):
     Powers.append(i)
     Times.append(end_time-start_time)
     print(f" 2^{i} took {end_time-start_time} seconds")
+    print(arr)
 print("double precision")
 for i in range(31): #30 should be the max due to tie constrains
     arr = np.random.uniform(0, 10, size=2**i).astype(np.float64) #64 is doube precisions
@@ -104,6 +105,7 @@ for i in range(31): #30 should be the max due to tie constrains
     Powers_dp.append(i)
     Times_dp.append(end_time-start_time)
     print(f" 2^{i} took {end_time-start_time} seconds")
+    print(arr)
 
 plt.figure(figsize=(10, 6))
 plt.plot(Powers, Times, marker='o', label='Integers (int)')
