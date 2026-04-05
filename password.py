@@ -69,10 +69,9 @@ def queryTime(m, k, n, hexPasswords, bitArray, offset): # queries the bitArray w
         start = time.perf_counter()
         if query(bitArray, m, k, hexPasswords[i + offset]) == True:
             Trues += 1
-        if i % 1000 == 0 and i != 0:
-            end = time.perf_counter()
-            avgTime += (end - start) * 1000
-    
+        end = time.perf_counter()
+        avgTime += (end - start) * 1000
+       
     return Trues, avgTime / (n / 1000)
 
 def main(hexPasswords):
